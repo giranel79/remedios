@@ -3,92 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro Interactivo Remedios</title>
+    <title>Libro Interactivo - Grabación</title>
     <style>
         body {
-            background-color: #333; /* Fondo oscuro para resaltar el libro en el video */
+            background-color: #222; /* Fondo oscuro elegante */
             margin: 0;
-            padding: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            font-family: sans-serif;
             overflow: hidden;
-            font-family: Arial, sans-serif;
         }
 
-        /* El contenedor debe tener tamaño FIJO para que funcione */
-        #flipbook {
-            width: 900px;  /* Ancho total (2 páginas de 450px) */
-            height: 650px; /* Alto */
-            display: none; /* Se oculta hasta que cargue para no ver el "desorden" */
-        }
-
-        #flipbook .page {
-            width: 450px;
-            height: 650px;
-            background-color: white;
-            display: block;
-        }
-
-        #flipbook .page img {
-            width: 100%;
-            height: 100%;
-            object-fit: fill; /* Obliga a la imagen a llenar la hoja exacta */
-        }
-
-        /* Mensaje de "Cargando..." */
-        #loader {
-            color: white;
+        /* Botón para asegurar que cargue antes de animar */
+        #start-btn {
+            padding: 15px 30px;
             font-size: 20px;
-            position: absolute;
+            background: #25D366; /* Verde tipo WhatsApp/Éxito */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
+
+        #book-container {
+            display: none; /* Oculto hasta dar clic */
+            width: 800px;
+            height: 600px;
+        }
+
+        .page {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            background-size: 100% 100%;
+        }
+
+        /* Usamos background-image para evitar problemas de tamaño */
+        .p1 { background-image: url('pagina1.png'); }
+        .p2 { background-image: url('pagina2.png'); }
+        .p3 { background-image: url('pagina3.png'); }
+        .p4 { background-image: url('pagina4.png'); }
+
     </style>
 </head>
 <body>
 
-    <div id="loader">Cargando libro...</div>
+    <button id="start-btn">🎥 CLIC PARA INICIAR ANIMACIÓN</button>
 
-    <div id="flipbook">
-        <div class="page"><img src="pagina1.png" alt="P 1"></div>
-        <div class="page"><img src="pagina2.png" alt="P 2"></div>
-        <div class="page"><img src="pagina3.png" alt="P 3"></div>
-        <div class="page"><img src="pagina4.png" alt="P 4"></div>
+    <div id="book-container">
+        <div class="page p1"></div>
+        <div class="page p2"></div>
+        <div class="page p3"></div>
+        <div class="page p4"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
     <script>
-        // Esperar a que TODA la página (imágenes incluidas) esté cargada
-        $(window).on('load', function() {
+        $("#start-btn").click(function(){
+            // 1. Ocultar botón
+            $(this).hide();
             
-            // Ocultar mensaje de carga y mostrar el libro
-            $("#loader").hide();
-            $("#flipbook").fadeIn(500);
+            // 2. Mostrar contenedor
+            $("#book-container").fadeIn(500);
 
-            // Iniciar el motor del libro
-            $("#flipbook").turn({
-                width: 900,
-                height: 650,
+            // 3. Crear el libro
+            $("#book-container").turn({
+                width: 800,
+                height: 600,
                 autoCenter: true,
-                duration: 1500, // Duración del paso de página
-                acceleration: true,
+                duration: 1500,
                 gradients: true,
-                elevation: 50
+                acceleration: true
             });
 
-            // --- SECUENCIA AUTOMÁTICA PARA TU VIDEO ---
-            // 1. Espera 1 segundo tras cargar
-            setTimeout(function() {
-                // 2. Abre el libro (pasa a página 2)
-                $("#flipbook").turn("page", 2);
+            // 4. ANIMACIÓN AUTOMÁTICA PARA TU VIDEO
+            // Espera 1 segundo y abre el libro
+            setTimeout(function(){
+                $("#book-container").turn("page", 2);
             }, 1000);
-
-            // 3. (Opcional) Pasa a la página 4 después de otros 3 segundos
-            setTimeout(function() {
-                 $("#flipbook").turn("page", 4);
-            }, 4500);
         });
     </script>
 
