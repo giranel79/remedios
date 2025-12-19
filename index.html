@@ -3,91 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro Interactivo - Grabación</title>
+    <title>Video Libro Meta</title>
     <style>
         body {
-            background-color: #222; /* Fondo oscuro elegante */
+            background-color: #f0f2f5; /* Color limpio para el video */
             margin: 0;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
             overflow: hidden;
         }
 
-        /* Botón para asegurar que cargue antes de animar */
-        #start-btn {
-            padding: 15px 30px;
-            font-size: 20px;
-            background: #25D366; /* Verde tipo WhatsApp/Éxito */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        #book-container {
-            display: none; /* Oculto hasta dar clic */
+        #flipbook {
             width: 800px;
             height: 600px;
+            display: none; /* Oculto hasta que des clic */
         }
 
-        .page {
+        #flipbook .page {
             width: 400px;
             height: 600px;
             background-color: white;
-            background-size: 100% 100%;
+            background-size: 100% 100%; /* Ajuste perfecto de imagen */
         }
 
-        /* Usamos background-image para evitar problemas de tamaño */
+        /* Asignamos las imágenes directamente en CSS para asegurar carga */
         .p1 { background-image: url('pagina1.png'); }
         .p2 { background-image: url('pagina2.png'); }
         .p3 { background-image: url('pagina3.png'); }
         .p4 { background-image: url('pagina4.png'); }
 
+        /* Botón gigante para iniciar */
+        #btn-grabar {
+            padding: 20px 40px;
+            font-size: 25px;
+            background: #0084FF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            font-weight: bold;
+        }
+
+        #btn-grabar:hover { background: #0066cc; }
     </style>
 </head>
 <body>
 
-    <button id="start-btn">🎥 CLIC PARA INICIAR ANIMACIÓN</button>
+    <button id="btn-grabar">🎥 CLIC AQUÍ PARA EMPEZAR</button>
 
-    <div id="book-container">
+    <div id="flipbook">
         <div class="page p1"></div>
         <div class="page p2"></div>
         <div class="page p3"></div>
         <div class="page p4"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
     <script>
-        $("#start-btn").click(function(){
-            // 1. Ocultar botón
-            $(this).hide();
-            
-            // 2. Mostrar contenedor
-            $("#book-container").fadeIn(500);
+        $(document).ready(function() {
+            $("#btn-grabar").click(function() {
+                // 1. Ocultar botón
+                $(this).hide();
+                
+                // 2. Mostrar libro y arrancarlo
+                $("#flipbook").fadeIn(500);
+                
+                $("#flipbook").turn({
+                    width: 800,
+                    height: 600,
+                    autoCenter: true,
+                    duration: 1500,
+                    gradients: true,
+                    acceleration: true
+                });
 
-            // 3. Crear el libro
-            $("#book-container").turn({
-                width: 800,
-                height: 600,
-                autoCenter: true,
-                duration: 1500,
-                gradients: true,
-                acceleration: true
+                // 3. AUTOMATIZACIÓN PARA EL VIDEO
+                // Espera 1 segundo y pasa la página solo
+                setTimeout(function() {
+                    $("#flipbook").turn("page", 2);
+                }, 1000);
             });
-
-            // 4. ANIMACIÓN AUTOMÁTICA PARA TU VIDEO
-            // Espera 1 segundo y abre el libro
-            setTimeout(function(){
-                $("#book-container").turn("page", 2);
-            }, 1000);
         });
     </script>
 
