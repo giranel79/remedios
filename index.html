@@ -33,7 +33,6 @@
             max-width: 260px;
             z-index: 50;
             line-height: 1.5rem;
-            /* Efecto rasgado sutil */
             clip-path: polygon(0% 2%, 98% 0%, 100% 98%, 2% 100%, 0% 50%);
         }
 
@@ -50,24 +49,24 @@
 
     <header class="relative overflow-hidden pt-8 pb-20 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-3/5 text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
+                <div class="lg:w-3/5">
                     <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full">Método de Biología Aplicada</span>
-                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6">Recupera la Sabiduría que tu Cuerpo <span class="text-emerald-400 italic">Nunca Olvidó.</span></h1>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">Recupera la Sabiduría que tu Cuerpo <span class="text-emerald-400 italic">Nunca Olvidó.</span></h1>
                     <p class="text-xl text-emerald-100/80 mb-10 leading-relaxed max-w-2xl">¿Cansado de tratar síntomas sin encontrar la raíz? Descifra el <strong>"Protocolo Ancestral"</strong> para reactivar tu energía vital.</p>
                     
                     <div class="flex flex-col lg:flex-row items-center gap-8">
-                        <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-xl border-2 border-[#d97706] text-center uppercase tracking-widest inline-block">
+                        <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-2 border-[#d97706] text-center uppercase tracking-widest inline-block">
                             DESCARGAR EL PROTOCOLO COMPLETO
                         </a>
-                        <div class="nota-papel text-xl lg:text-2xl">
+                        <div class="nota-papel text-xl lg:text-2xl text-left">
                             "todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-2/5 flex justify-center mt-12 lg:mt-0">
                     <div class="relative group">
-                        <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 transition-transform duration-500">
+                        <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 cursor-pointer">
                         <div class="absolute -bottom-6 -left-6 bg-yellow-500 text-[#0f291e] p-4 rounded-full font-bold shadow-lg animate-bounce text-sm text-center">Sello de <br>Calidad</div>
                     </div>
                 </div>
@@ -77,22 +76,22 @@
 
     <section class="py-16 bg-[#0f291e] text-white text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-12">¿Te identificas con esto?</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-sm text-left">
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><span class="text-yellow-400 text-3xl font-bold">!</span></div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Efectos Secundarios</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Cansado de medicamentos que tapan un síntoma pero generan otro problema.</p>
+            <h2 class="text-3xl lg:text-5xl font-bold mb-16 leading-tight">¿Sientes que tu salud es un rompecabezas al que le faltan piezas?</h2>
+            <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
+                    <div class="text-yellow-400 text-3xl mb-4 font-bold">1</div>
+                    <h3 class="text-xl font-bold mb-3">Fatiga Inexplicable</h3>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Duermes, pero no descansas. Tu batería biológica parece estar drenándose constantemente.</p>
                 </div>
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H7zm0 2h10v10H7V7zm2 2v2h2V9H9zm4 0v2h2V9h-2zm-4 4v2h2v-2H9zm4 0v2h2v-2h-2z"/></svg></div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Solo Alivio Temporal</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Buscas soluciones que nutran la raíz del problema, no parches momentáneos.</p>
+                <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
+                    <div class="text-yellow-400 text-3xl mb-4 font-bold">2</div>
+                    <h3 class="text-xl font-bold mb-3">Neblina Mental</h3>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Falta de enfoque y claridad. Sientes que la modernidad ha desconectado tus sentidos básicos.</p>
                 </div>
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Sabiduría Perdida</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Sientes que se ha perdido el conocimiento de las abuelas sobre las plantas.</p>
+                <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
+                    <div class="text-yellow-400 text-3xl mb-4 font-bold">3</div>
+                    <h3 class="text-xl font-bold mb-3">La Rutina Química</h3>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Cansado de soluciones temporales que solo ocultan el problema sin resolver la causa real.</p>
                 </div>
             </div>
         </div>
@@ -100,30 +99,30 @@
 
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-gray-900 leading-tight italic">Historias de transformación real:</h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-sm">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-900 italic">Historias de transformación real:</h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"El <strong>Elixir de Azafrán</strong> de la Fase 2 desinflamó mi sistema en 4 días. ¡Por fin duermo bien!"</p>
-                    <p class="font-bold text-emerald-800">- María Paula R., Cali.</p>
+                    <p class="italic text-gray-700 mb-4 text-sm">"El <strong>Elixir de Azafrán</strong> de la Fase 2 desinflamó mi sistema en 4 días. ¡Por fin duermo bien!"</p>
+                    <p class="font-bold text-emerald-800 text-xs">- María Paula R., Cali.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"La neblina mental desapareció con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso."</p>
-                    <p class="font-bold text-emerald-800">- Carlos H., Bogotá.</p>
+                    <p class="italic text-gray-700 mb-4 text-sm">"La neblina mental desapareció con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso."</p>
+                    <p class="font-bold text-emerald-800 text-xs">- Carlos H., Bogotá.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía es otra. ¡Este protocolo es único!"</p>
-                    <p class="font-bold text-emerald-800">- Ximena V., Ecuador.</p>
+                    <p class="italic text-gray-700 mb-4 text-sm">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía es otra. ¡Este protocolo es único!"</p>
+                    <p class="font-bold text-emerald-800 text-xs">- Ximena V., Ecuador.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"Increíble cómo la <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos. Saludos desde Madrid."</p>
-                    <p class="font-bold text-emerald-800">- Elena M., España.</p>
+                    <p class="italic text-gray-700 mb-4 text-sm">"La <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos. Saludos desde Madrid."</p>
+                    <p class="font-bold text-emerald-800 text-xs">- Elena M., España.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="py-20 bg-[#f4f1ea]">
-        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 text-left">
             <div class="lg:w-1/2">
                 <h2 class="text-4xl font-extrabold mb-8 text-gray-900 leading-tight">Un Sistema, no solo un libro.</h2>
                 <ul class="space-y-6">
