@@ -19,41 +19,34 @@
         .btn-shine { position: relative; overflow: hidden; }
         .btn-shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent); transform: skewX(-25deg); animation: shine 3s infinite; }
 
-        /* NUEVA ANIMACIÓN ESCRITURA MULTILÍNEA */
-        @keyframes revealText {
-            from { clip-path: inset(0 100% 0 0); }
-            to { clip-path: inset(0 0 0 0); }
-        }
-
-        .nota-abuela-hero {
+        /* NOTA DE LA ABUELA ESTÁTICA Y RASGADA */
+        .nota-papel {
             font-family: 'Caveat', cursive;
             background: #fff;
             background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
-            background-size: 100% 1.6rem;
+            background-size: 100% 1.5rem;
             border-left: 4px solid #ff8888;
-            box-shadow: 8px 8px 20px rgba(0,0,0,0.3);
-            transform: rotate(-2deg);
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.4);
+            transform: rotate(-3deg);
             padding: 1.2rem;
             color: #1e3a8a;
+            max-width: 260px;
             z-index: 50;
-            display: inline-block;
-            max-width: 280px; /* Ancho ideal para 2-3 renglones */
-            line-height: 1.6rem;
+            line-height: 1.5rem;
+            /* Efecto rasgado sutil */
+            clip-path: polygon(0% 2%, 98% 0%, 100% 98%, 2% 100%, 0% 50%);
         }
 
-        .typing-multiline {
-            display: inline-block;
-            animation: revealText 5s steps(100) infinite;
-            overflow: hidden;
-        }
-
+        /* EFECTO ABANICO */
         .page-fan { position: relative; height: 380px; width: 280px; margin: 0 auto; }
         .page-fan img { position: absolute; transition: all 0.5s ease; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); width: 100%; height: 100%; object-fit: cover; }
         .page-fan:hover .p1 { transform: rotate(-15deg) translateX(-60px); }
+        .page-fan:hover .p2 { transform: rotate(-5deg) translateX(-20px); }
+        .page-fan:hover .p3 { transform: rotate(5deg) translateX(20px); }
         .page-fan:hover .p4 { transform: rotate(15deg) translateX(60px); }
     </style>
 </head>
-<body class="bg-[#fdfbf7] text-gray-900 overflow-x-hidden text-left">
+<body class="bg-[#fdfbf7] text-gray-900 overflow-x-hidden">
 
     <header class="relative overflow-hidden pt-8 pb-20 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 relative z-10">
@@ -61,25 +54,20 @@
                 <div class="lg:w-3/5 text-center lg:text-left">
                     <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full">Método de Biología Aplicada</span>
                     <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6">Recupera la Sabiduría que tu Cuerpo <span class="text-emerald-400 italic">Nunca Olvidó.</span></h1>
-                    <p class="text-xl text-emerald-100/80 mb-10 leading-relaxed max-w-2xl">¿Cansado de tratar síntomas sin encontrar la raíz? Descifra el <strong>"Protocolo Ancestral"</strong>: Un sistema codificado en 4 fases para reactivar tu energía vital.</p>
+                    <p class="text-xl text-emerald-100/80 mb-10 leading-relaxed max-w-2xl">¿Cansado de tratar síntomas sin encontrar la raíz? Descifra el <strong>"Protocolo Ancestral"</strong> para reactivar tu energía vital.</p>
                     
-                    <div class="flex flex-col lg:flex-row items-center lg:items-center gap-6">
-                        <div class="relative">
-                            <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-2 border-[#d97706] text-center uppercase tracking-widest inline-block">
-                                DESCARGAR EL PROTOCOLO COMPLETO
-                            </a>
-                        </div>
-                        <div class="nota-abuela-hero">
-                            <span class="typing-multiline text-xl lg:text-2xl">
-                                "todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"
-                            </span>
+                    <div class="flex flex-col lg:flex-row items-center gap-8">
+                        <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-xl border-2 border-[#d97706] text-center uppercase tracking-widest inline-block">
+                            DESCARGAR EL PROTOCOLO COMPLETO
+                        </a>
+                        <div class="nota-papel text-xl lg:text-2xl">
+                            "todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"
                         </div>
                     </div>
                 </div>
-                
                 <div class="lg:w-2/5 flex justify-center mt-12 lg:mt-0">
                     <div class="relative group">
-                        <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                        <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 transition-transform duration-500">
                         <div class="absolute -bottom-6 -left-6 bg-yellow-500 text-[#0f291e] p-4 rounded-full font-bold shadow-lg animate-bounce text-sm text-center">Sello de <br>Calidad</div>
                     </div>
                 </div>
@@ -90,20 +78,20 @@
     <section class="py-16 bg-[#0f291e] text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-bold mb-12">¿Te identificas con esto?</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-sm">
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-sm text-left">
+                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><span class="text-yellow-400 text-3xl font-bold">!</span></div>
-                    <h3 class="text-xl font-bold mb-4">Efectos Secundarios</h3>
+                    <h3 class="text-xl font-bold mb-4 text-white">Efectos Secundarios</h3>
                     <p class="text-emerald-100/60 leading-relaxed">Cansado de medicamentos que tapan un síntoma pero generan otro problema.</p>
                 </div>
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
+                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H7zm0 2h10v10H7V7zm2 2v2h2V9H9zm4 0v2h2V9h-2zm-4 4v2h2v-2H9zm4 0v2h2v-2h-2z"/></svg></div>
-                    <h3 class="text-xl font-bold mb-4">Solo Alivio Temporal</h3>
+                    <h3 class="text-xl font-bold mb-4 text-white">Solo Alivio Temporal</h3>
                     <p class="text-emerald-100/60 leading-relaxed">Buscas soluciones que nutran la raíz del problema, no parches momentáneos.</p>
                 </div>
-                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
+                <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
-                    <h3 class="text-xl font-bold mb-4">Sabiduría Perdida</h3>
+                    <h3 class="text-xl font-bold mb-4 text-white">Sabiduría Perdida</h3>
                     <p class="text-emerald-100/60 leading-relaxed">Sientes que se ha perdido el conocimiento de las abuelas sobre las plantas.</p>
                 </div>
             </div>
@@ -129,6 +117,23 @@
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
                     <p class="italic text-gray-700 mb-4">"Increíble cómo la <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos. Saludos desde Madrid."</p>
                     <p class="font-bold text-emerald-800">- Elena M., España.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#f4f1ea]">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-extrabold mb-8 text-gray-900 leading-tight">Un Sistema, no solo un libro.</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Decodificación Biológica</p><p class="text-gray-600 text-sm">Entiende lo que tu cuerpo intenta decirte.</p></div></li>
+                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Protocolo de 4 Fases</p><p class="text-gray-600 text-sm">Un mapa sin errores desde el día 1.</p></div></li>
+                </ul>
+            </div>
+            <div class="lg:w-1/2 flex justify-center">
+                <div class="page-fan">
+                    <img src="pagina4.png" class="p4" style="z-index: 10;"><img src="pagina3.png" class="p3" style="z-index: 9;"><img src="pagina2.png" class="p2" style="z-index: 8;"><img src="pagina1.png" class="p1" style="z-index: 7;">
                 </div>
             </div>
         </div>
