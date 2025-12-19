@@ -6,75 +6,89 @@
     <title>Libro Interactivo Remedios</title>
     <style>
         body {
-            background-color: #f0f2f5;
+            background-color: #333; /* Fondo oscuro para resaltar el libro en el video */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
             overflow: hidden;
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
         }
 
+        /* El contenedor debe tener tamaño FIJO para que funcione */
         #flipbook {
-            width: 800px;
-            height: 600px;
+            width: 900px;  /* Ancho total (2 páginas de 450px) */
+            height: 650px; /* Alto */
+            display: none; /* Se oculta hasta que cargue para no ver el "desorden" */
         }
 
         #flipbook .page {
-            width: 400px;
-            height: 600px;
+            width: 450px;
+            height: 650px;
             background-color: white;
-            cursor: pointer; /* Manito para indicar clic */
+            display: block;
         }
-        
+
         #flipbook .page img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ajusta la imagen sin cortarla */
+            object-fit: fill; /* Obliga a la imagen a llenar la hoja exacta */
         }
 
-        .instruction {
+        /* Mensaje de "Cargando..." */
+        #loader {
+            color: white;
+            font-size: 20px;
             position: absolute;
-            bottom: 20px;
-            color: #333;
-            font-size: 16px;
-            font-weight: bold;
-            z-index: 100;
-            background: rgba(255,255,255,0.8);
-            padding: 5px 10px;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
-    <div id="flipbook">
-        <div class="page"><img src="pagina1.png" alt="Portada"></div>
-        <div class="page"><img src="pagina2.png" alt="Página 2"></div>
-        <div class="page"><img src="pagina3.png" alt="Página 3"></div>
-        <div class="page"><img src="pagina4.png" alt="Final"></div>
-    </div>
+    <div id="loader">Cargando libro...</div>
 
-    <div class="instruction">Toca el libro o las esquinas para abrir</div>
+    <div id="flipbook">
+        <div class="page"><img src="pagina1.png" alt="P 1"></div>
+        <div class="page"><img src="pagina2.png" alt="P 2"></div>
+        <div class="page"><img src="pagina3.png" alt="P 3"></div>
+        <div class="page"><img src="pagina4.png" alt="P 4"></div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            // Iniciar el libro
+        // Esperar a que TODA la página (imágenes incluidas) esté cargada
+        $(window).on('load', function() {
+            
+            // Ocultar mensaje de carga y mostrar el libro
+            $("#loader").hide();
+            $("#flipbook").fadeIn(500);
+
+            // Iniciar el motor del libro
             $("#flipbook").turn({
-                width: 800,
-                height: 600,
+                width: 900,
+                height: 650,
                 autoCenter: true,
-                duration: 1500 // Un poco más lento para que se vea elegante
+                duration: 1500, // Duración del paso de página
+                acceleration: true,
+                gradients: true,
+                elevation: 50
             });
 
-            // Animación automática: Se abre solo a los 1.5 segundos
+            // --- SECUENCIA AUTOMÁTICA PARA TU VIDEO ---
+            // 1. Espera 1 segundo tras cargar
             setTimeout(function() {
+                // 2. Abre el libro (pasa a página 2)
                 $("#flipbook").turn("page", 2);
-            }, 1500);
+            }, 1000);
+
+            // 3. (Opcional) Pasa a la página 4 después de otros 3 segundos
+            setTimeout(function() {
+                 $("#flipbook").turn("page", 4);
+            }, 4500);
         });
     </script>
 
