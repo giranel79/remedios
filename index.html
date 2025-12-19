@@ -10,7 +10,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Merriweather', serif; }
-        .gradient-bg { background: linear-gradient(135deg, #0f291e 0%, #1a3c2d 100%); }
         .book-shadow { filter: drop-shadow(20px 25px 30px rgba(0,0,0,0.5)); }
         
         /* Animación suave de entrada */
@@ -26,6 +25,28 @@
             50% { transform: translateY(-10px) scale(1.05); } 
         }
         .animate-jump { animation: jump 1.5s infinite ease-in-out; }
+
+        /* NUEVA ANIMACIÓN: BRILLO DESPLAZABLE */
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: skewX(-25deg);
+            animation: shine 3s infinite;
+        }
 
         /* Efecto de abanico para las páginas internas */
         .page-fan {
@@ -66,7 +87,7 @@
                         ¿Cansado de tratar síntomas sin encontrar la raíz? Descifra el <strong>"Protocolo Ancestral"</strong>: Un sistema codificado en 4 fases para reactivar tu energía vital y sanar desde el origen.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#comprar" class="px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-xl text-center uppercase tracking-widest">
+                        <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-2 border-[#d97706] text-center uppercase tracking-widest">
                             DESCARGAR EL PROTOCOLO COMPLETO
                         </a>
                     </div>
@@ -175,7 +196,7 @@
                     <li>✅ Protocolo Paso a Paso de 4 Fases</li>
                     <li>✅ Acceso de por vida</li>
                 </ul>
-                <a href="TU_LINK_DE_HOTMART_AQUI" class="block w-full py-4 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-lg lg:text-xl rounded-2xl shadow-xl animate-jump transition-all text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
+                <a href="TU_LINK_DE_HOTMART_AQUI" class="btn-shine block w-full py-4 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-lg lg:text-xl rounded-2xl shadow-xl animate-jump transition-all text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
                 <p class="mt-6 text-[9px] text-gray-400 font-bold uppercase tracking-widest text-center italic">Acceso Digital Inmediato • Pago Seguro</p>
             </div>
         </div>
@@ -186,4 +207,4 @@
     </footer>
 
 </body>
-</html>
+</html>                                              
