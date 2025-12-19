@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro Interactivo</title>
+    <title>Libro Interactivo Remedios</title>
     <style>
         body {
             background-color: #f0f2f5;
@@ -25,21 +25,25 @@
             width: 400px;
             height: 600px;
             background-color: white;
-            box-shadow: inset -3px 0px 20px rgba(0,0,0,0.1);
+            cursor: pointer; /* Manito para indicar clic */
         }
         
         #flipbook .page img {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: contain; /* Ajusta la imagen sin cortarla */
         }
 
         .instruction {
             position: absolute;
             bottom: 20px;
-            color: #666;
-            font-size: 14px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
             z-index: 100;
+            background: rgba(255,255,255,0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -52,26 +56,25 @@
         <div class="page"><img src="pagina4.png" alt="Final"></div>
     </div>
 
-    <div class="instruction">Haz clic en las esquinas para pasar página</div>
+    <div class="instruction">Toca el libro o las esquinas para abrir</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
     <script>
         $(document).ready(function() {
+            // Iniciar el libro
             $("#flipbook").turn({
                 width: 800,
                 height: 600,
                 autoCenter: true,
-                gradients: true,
-                acceleration: true,
-                duration: 1000
+                duration: 1500 // Un poco más lento para que se vea elegante
             });
 
-            // Animación automática a los 2 segundos
+            // Animación automática: Se abre solo a los 1.5 segundos
             setTimeout(function() {
                 $("#flipbook").turn("page", 2);
-            }, 2000); 
+            }, 1500);
         });
     </script>
 
