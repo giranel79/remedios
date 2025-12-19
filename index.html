@@ -13,22 +13,34 @@
         .gradient-bg { background: linear-gradient(135deg, #0f291e 0%, #1a3c2d 100%); }
         .book-shadow { filter: drop-shadow(20px 25px 30px rgba(0,0,0,0.5)); }
         
+        /* Animación suave de entrada */
         .fade-in { animation: fadeIn 1s ease-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes jump { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.05); } }
+        /* Animación de salto agresiva */
+        @keyframes jump { 
+            0%, 100% { transform: translateY(0) scale(1); } 
+            50% { transform: translateY(-10px) scale(1.05); } 
+        }
         .animate-jump { animation: jump 1.5s infinite ease-in-out; }
 
-        .page-fan { position: relative; height: 350px; width: 250px; margin: 0 auto; }
+        /* Efecto de abanico para las páginas internas */
+        .page-fan {
+            position: relative;
+            height: 400px;
+            width: 300px;
+            margin: 0 auto;
+        }
         .page-fan img {
             position: absolute;
             transition: all 0.5s ease;
             border-radius: 4px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
         .page-fan:hover .p1 { transform: rotate(-15deg) translateX(-60px); }
@@ -42,6 +54,7 @@
     <header class="relative overflow-hidden pt-8 pb-20 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12">
+                
                 <div class="lg:w-3/5 text-center lg:text-left fade-in">
                     <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full">
                         Método de Biología Aplicada
@@ -71,25 +84,25 @@
         </div>
     </header>
 
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white text-left">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 leading-tight">Resultados de quienes aplicaron el código:</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-900 leading-tight italic">Resultados de quienes aplicaron el código:</h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
                     <p class="italic text-gray-700 mb-4">"El <strong>Elixir de Azafrán</strong> de la Fase 2 desinflamó mi sistema en 4 días. ¡Por fin duermo bien y sin dolor!"</p>
-                    <p class="font-bold text-emerald-800 text-sm">- María Paula R., Cali.</p>
+                    <p class="font-bold text-emerald-800">- María Paula R., Cali.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
                     <p class="italic text-gray-700 mb-4">"La neblina mental desapareció con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso que realmente funciona."</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Carlos H., Bogotá.</p>
+                    <p class="font-bold text-emerald-800">- Carlos H., Bogotá.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía es otra. ¡Este protocolo es único!"</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Ximena V., Ecuador.</p>
+                    <p class="italic text-gray-700 mb-4">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía en las mañanas es otra. ¡Este protocolo es único!"</p>
+                    <p class="font-bold text-emerald-800">- Ximena V., Ecuador.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
                     <p class="italic text-gray-700 mb-4">"Increíble cómo la <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos. Saludos desde Madrid."</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Elena M., España.</p>
+                    <p class="font-bold text-emerald-800">- Elena M., España.</p>
                 </div>
             </div>
         </div>
@@ -102,11 +115,11 @@
                 <ul class="space-y-6">
                     <li class="flex items-start">
                         <span class="bg-emerald-600 p-1 rounded-full mr-4 mt-1">✓</span>
-                        <div><p class="font-bold text-lg">Decodificación Biológica:</p><p class="text-gray-600">Entiende lo que tu cuerpo intenta decirte.</p></div>
+                        <div><p class="font-bold text-lg">Decodificación Biológica:</p><p class="text-gray-600 text-sm">Entiende lo que tu cuerpo intenta decirte.</p></div>
                     </li>
                     <li class="flex items-start">
                         <span class="bg-emerald-600 p-1 rounded-full mr-4 mt-1">✓</span>
-                        <div><p class="font-bold text-lg">Protocolo de 4 Fases:</p><p class="text-gray-600">Un mapa sin errores desde el día 1.</p></div>
+                        <div><p class="font-bold text-lg">Protocolo de 4 Fases:</p><p class="text-gray-600 text-sm">Un mapa sin errores desde el día 1.</p></div>
                     </li>
                 </ul>
             </div>
@@ -121,25 +134,25 @@
     <section id="comprar" class="py-10 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl lg:text-5xl font-black mb-8 text-yellow-400 animate-jump uppercase leading-none">¡COMIENZA TU TRANSFORMACIÓN HOY!</h2>
-            <div class="max-w-md mx-auto bg-white rounded-[30px] p-6 lg:p-8 text-gray-900 shadow-2xl border-t-8 border-yellow-400">
-                <p class="uppercase font-black tracking-widest text-emerald-700 mb-4 text-[10px]">OFERTA DE LANZAMIENTO ÚNICA</p>
-                <div class="flex justify-center items-center gap-4 mb-6">
-                    <span class="text-gray-400 line-through text-xl font-bold">$97 USD</span>
-                    <span class="text-6xl font-black text-red-600 leading-none">$37</span>
+            <div class="max-w-md mx-auto bg-white rounded-[40px] p-8 lg:p-10 text-gray-900 shadow-2xl border-t-8 border-yellow-400">
+                <p class="uppercase font-black tracking-widest text-emerald-700 mb-6 text-xs">OFERTA DE LANZAMIENTO ÚNICA</p>
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <span class="text-gray-400 line-through text-2xl font-bold">$97</span>
+                    <span class="text-6xl lg:text-8xl font-black text-red-600 leading-none">$37</span>
                     <span class="font-black text-xl text-red-600">USD</span>
                 </div>
-                <ul class="text-left space-y-2 mb-8 text-gray-700 font-bold text-sm">
+                <ul class="text-left space-y-4 mb-10 text-gray-700 font-bold">
                     <li>✅ Guía Completa de Remedios Secretos</li>
                     <li>✅ Protocolo Paso a Paso de 4 Fases</li>
-                    <li>✅ Acceso Inmediato y de por Vida</li>
+                    <li>✅ Acceso de por vida a actualizaciones</li>
                 </ul>
-                <a href="TU_LINK_DE_HOTMART_AQUI" class="block w-full py-5 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-xl rounded-2xl shadow-xl animate-jump transition-all text-center uppercase">¡SÍ, LO QUIERO AHORA!</a>
-                <p class="mt-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest italic text-center">Acceso Digital Inmediato • Pago 100% Seguro</p>
+                <a href="TU_LINK_DE_HOTMART_AQUI" class="block w-full py-6 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-2xl rounded-2xl shadow-xl animate-jump transition-all text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
+                <p class="mt-8 text-[10px] text-gray-400 font-bold uppercase tracking-widest text-center italic">Acceso Digital Inmediato • Pago Seguro</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-6 text-center bg-[#0a1b14] text-emerald-100/30 text-[10px] font-bold uppercase tracking-widest">
+    <footer class="py-10 text-center bg-[#0a1b14] text-emerald-100/30 text-[10px] font-bold uppercase tracking-widest">
         <p>© 2025 Club de Sanación Natural. Todos los derechos reservados.</p>
     </footer>
 
