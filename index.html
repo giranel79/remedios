@@ -15,34 +15,39 @@
         @keyframes jump { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.05); } }
         .animate-jump { animation: jump 1.5s infinite ease-in-out; }
 
-        /* ANIMACIÓN DE BRILLO DESPLAZABLE */
         @keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
         .btn-shine { position: relative; overflow: hidden; }
         .btn-shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent); transform: skewX(-25deg); animation: shine 3s infinite; }
 
-        /* NOTA DE LA ABUELA (PAPEL DE CUADERNO) */
-        .nota-abuela {
+        /* ANIMACIÓN ESCRITURA NOTA DE LA ABUELA */
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #1e3a8a;
+            animation: typing 4s steps(40, end) infinite;
+        }
+
+        .nota-abuela-final {
             font-family: 'Caveat', cursive;
             background: #fff;
             background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
             background-size: 100% 1.5rem;
-            border-left: 2px solid #ff8888;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-            transform: rotate(3deg);
-            padding: 1rem;
+            border-left: 4px solid #ff8888;
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.2);
+            transform: rotate(-2deg);
+            padding: 1.5rem;
             color: #1e3a8a;
-            line-height: 1.4rem;
-            position: absolute;
-            width: 200px;
-            z-index: 50;
+            max-width: 320px;
+            margin: -20px auto 40px;
+            z-index: 40;
+            position: relative;
         }
 
-        /* EFECTO ABANICO */
         .page-fan { position: relative; height: 380px; width: 280px; margin: 0 auto; }
         .page-fan img { position: absolute; transition: all 0.5s ease; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); width: 100%; height: 100%; object-fit: cover; }
         .page-fan:hover .p1 { transform: rotate(-15deg) translateX(-60px); }
-        .page-fan:hover .p2 { transform: rotate(-5deg) translateX(-20px); }
-        .page-fan:hover .p3 { transform: rotate(5deg) translateX(20px); }
         .page-fan:hover .p4 { transform: rotate(15deg) translateX(60px); }
     </style>
 </head>
@@ -59,9 +64,8 @@
                         <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-2 border-[#d97706] text-center uppercase tracking-widest">DESCARGAR EL PROTOCOLO COMPLETO</a>
                     </div>
                 </div>
-                <div class="lg:w-2/5 flex justify-center relative mt-12 lg:mt-0">
+                <div class="lg:w-2/5 flex justify-center mt-12 lg:mt-0">
                     <div class="relative group">
-                        <div class="nota-abuela -top-12 -right-6 lg:-right-16 text-lg">"Todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"</div>
                         <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 group-hover:rotate-0 transition-transform duration-500">
                         <div class="absolute -bottom-6 -left-6 bg-yellow-500 text-[#0f291e] p-4 rounded-full font-bold shadow-lg animate-bounce text-sm text-center">Sello de <br>Calidad</div>
                     </div>
@@ -77,41 +81,41 @@
                 <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><span class="text-yellow-400 text-3xl font-bold">!</span></div>
                     <h3 class="text-xl font-bold mb-4">Efectos Secundarios</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Cansado de medicamentos que tapan un síntoma pero generan otro problema.</p>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Cansado de medicamentos que tapan un síntoma pero generan otro problema.</p>
                 </div>
                 <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H7zm0 2h10v10H7V7zm2 2v2h2V9H9zm4 0v2h2V9h-2zm-4 4v2h2v-2H9zm4 0v2h2v-2h-2z"/></svg></div>
                     <h3 class="text-xl font-bold mb-4">Solo Alivio Temporal</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Buscas soluciones que nutran la raíz del problema, no parches momentáneos.</p>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Buscas soluciones que nutran la raíz del problema, no parches momentáneos.</p>
                 </div>
                 <div class="bg-[#0a1b14] p-10 rounded-3xl border border-emerald-900/30 flex flex-col items-center">
                     <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6"><svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
                     <h3 class="text-xl font-bold mb-4">Sabiduría Perdida</h3>
-                    <p class="text-emerald-100/60 leading-relaxed">Sientes que se ha perdido el conocimiento de las abuelas sobre las plantas.</p>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Sientes que se ha perdido el conocimiento de las abuelas sobre las plantas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white text-left">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-16 text-gray-900 leading-tight italic">Historias de transformación real:</h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-sm">
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"El <strong>Elixir de Azafrán</strong> de la Fase 2 desinflamó mi sistema en 4 días. ¡Por fin duermo bien y sin dolor!"</p>
-                    <p class="font-bold text-emerald-800 text-sm">- María Paula R., Cali.</p>
+                    <p class="italic text-gray-700 mb-4">"El <strong>Elixir de Azafrán</strong> de la Fase 2 desinflamó mi sistema en 4 días. ¡Por fin duermo bien!"</p>
+                    <p class="font-bold text-emerald-800">- María Paula R., Cali.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"La neblina mental desapareció con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso que realmente funciona."</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Carlos H., Bogotá.</p>
+                    <p class="italic text-gray-700 mb-4">"La neblina mental desapareció con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso."</p>
+                    <p class="font-bold text-emerald-800">- Carlos H., Bogotá.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía en las mañanas es otra. ¡Este protocolo es único!"</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Ximena V., Ecuador.</p>
+                    <p class="italic text-gray-700 mb-4">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi energía es otra. ¡Este protocolo es único!"</p>
+                    <p class="font-bold text-emerald-800">- Ximena V., Ecuador.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4">"Increíble cómo la <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos de años. Saludos desde Madrid."</p>
-                    <p class="font-bold text-emerald-800 text-sm">- Elena M., España.</p>
+                    <p class="italic text-gray-700 mb-4">"Increíble cómo la <strong>Compresa Biológica</strong> me ayudó con los dolores crónicos. Saludos desde Madrid."</p>
+                    <p class="font-bold text-emerald-800">- Elena M., España.</p>
                 </div>
             </div>
         </div>
@@ -120,7 +124,7 @@
     <section class="py-20 bg-[#f4f1ea]">
         <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
             <div class="lg:w-1/2">
-                <h2 class="text-4xl font-extrabold mb-8 text-gray-900">Un Sistema, no solo un libro.</h2>
+                <h2 class="text-4xl font-extrabold mb-8 text-gray-900 leading-tight">Un Sistema, no solo un libro.</h2>
                 <ul class="space-y-6">
                     <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg">Decodificación Biológica</p><p class="text-gray-600 text-sm">Entiende lo que tu cuerpo intenta decirte.</p></div></li>
                     <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg">Protocolo de 4 Fases</p><p class="text-gray-600 text-sm">Un mapa sin errores desde el día 1.</p></div></li>
@@ -134,23 +138,26 @@
         </div>
     </section>
 
+    <div class="container mx-auto px-6">
+        <div class="nota-abuela-final">
+            <span class="typing-effect text-xl">
+                "todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"
+            </span>
+        </div>
+    </div>
+
     <section id="comprar" class="py-10 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl lg:text-5xl font-black mb-6 text-yellow-400 animate-jump uppercase leading-none">¡COMIENZA TU TRANSFORMACIÓN HOY!</h2>
-            <div class="max-w-sm mx-auto bg-white rounded-[20px] p-6 lg:p-7 text-gray-900 shadow-2xl border-t-8 border-yellow-400">
+            <h2 class="text-3xl lg:text-5xl font-black mb-10 text-yellow-400 animate-jump uppercase leading-none">¡COMIENZA TU TRANSFORMACIÓN HOY!</h2>
+            <div class="max-w-sm mx-auto bg-white rounded-[20px] p-6 lg:p-8 text-gray-900 shadow-2xl border-t-8 border-yellow-400">
                 <p class="uppercase font-black tracking-widest text-emerald-700 mb-4 text-[10px]">OFERTA ÚNICA</p>
-                <div class="flex justify-center items-center gap-3 mb-6">
-                    <span class="text-gray-400 line-through text-xl font-bold">$97</span>
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <span class="text-gray-400 line-through text-2xl font-bold">$97</span>
                     <span class="text-6xl font-black text-red-600 leading-none">$37</span>
-                    <span class="font-bold text-lg text-red-600">USD</span>
+                    <span class="font-black text-xl text-red-600">USD</span>
                 </div>
-                <ul class="text-left space-y-3 mb-8 text-gray-700 font-bold text-xs lg:text-sm">
-                    <li>✅ Guía Completa de Remedios Secretos</li>
-                    <li>✅ Protocolo Paso a Paso de 4 Fases</li>
-                    <li>✅ Acceso de por vida</li>
-                </ul>
-                <a href="TU_LINK_DE_HOTMART_AQUI" class="btn-shine block w-full py-4 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-lg lg:text-xl rounded-2xl shadow-xl animate-jump transition-all text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
-                <p class="mt-6 text-[9px] text-gray-400 font-bold uppercase tracking-widest text-center italic">Acceso Digital Inmediato • Pago Seguro</p>
+                <a href="TU_LINK_DE_HOTMART_AQUI" class="btn-shine block w-full py-5 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-xl rounded-2xl shadow-xl animate-jump text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
+                <p class="mt-8 text-[10px] text-gray-400 font-bold uppercase tracking-widest text-center italic">Acceso Digital Inmediato • Pago Seguro</p>
             </div>
         </div>
     </section>
