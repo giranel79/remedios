@@ -3,37 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo Ancestral: El Código de tu Bienestar</title>
+    <title>Protocolo Ancestral: El Regalo de tu Bienestar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Merriweather', serif; }
         .book-shadow { filter: drop-shadow(20px 25px 30px rgba(0,0,0,0.5)); }
         
+        /* DECORACIÓN NAVIDEÑA ORGÁNICA (Hierbas y Frutos) */
+        .navidad-organic { position: relative; border-top: 6px solid #064e3b; }
+        .navidad-organic::before { content: '🌿🍒🌲'; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 1.5rem; letter-spacing: 10px; z-index: 20; }
+
         @keyframes jump { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.05); } }
         .animate-jump { animation: jump 1.5s infinite ease-in-out; }
+
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(251, 191, 36, 0); } 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); } }
+        .btn-viral { animation: pulse-gold 2s infinite; }
 
         @keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
         .btn-shine { position: relative; overflow: hidden; }
         .btn-shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent); transform: skewX(-25deg); animation: shine 3s infinite; }
 
-        /* NOTA DE LA ABUELA ESTÁTICA Y RASGADA */
+        /* NOTA DE LA ABUELA */
         .nota-papel {
             font-family: 'Caveat', cursive;
             background: #fff;
-            background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+            background-image: linear-gradient(#f0f0f0 1px, transparent 1px);
             background-size: 100% 1.5rem;
-            border-left: 4px solid #ff8888;
-            box-shadow: 10px 10px 25px rgba(0,0,0,0.4);
+            border-left: 4px solid #059669;
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.3);
             transform: rotate(-3deg);
             padding: 1.2rem;
-            color: #1e3a8a;
+            color: #064e3b;
             max-width: 260px;
             z-index: 50;
             line-height: 1.5rem;
             clip-path: polygon(0% 2%, 98% 0%, 100% 98%, 2% 100%, 0% 50%);
+        }
+
+        /* FIX CONTENEDOR BONOS (IMÁGENES VERTICALES) */
+        .bono-container-img { 
+            width: 100%; 
+            height: 350px; /* Altura fija para que la imagen vertical luzca */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            overflow: hidden;
+            background: #f8fafc;
+            border-radius: 1rem;
+        }
+        .bono-container-img img { 
+            height: 100%; 
+            width: auto; 
+            object-fit: contain; 
+            transition: transform 0.5s ease;
         }
 
         /* EFECTO ABANICO */
@@ -44,49 +69,50 @@
         .page-fan:hover .p3 { transform: rotate(5deg) translateX(20px); }
         .page-fan:hover .p4 { transform: rotate(15deg) translateX(60px); }
 
-        /* ESTILO TARJETAS DE BONOS */
-        .bono-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
-        .bono-card:hover { transform: translateY(-10px); border-color: #10b981; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .bono-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .bono-card:hover { transform: translateY(-10px); border-color: #10b981; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2); }
     </style>
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1376300013935976');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"
-/></noscript>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1376300013935976');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"/></noscript>
 </head>
+
 <body class="bg-[#fdfbf7] text-gray-900 overflow-x-hidden">
 
-    <header class="relative overflow-hidden pt-8 pb-20 bg-[#0f291e] text-white">
+    <header class="relative overflow-hidden pt-12 pb-24 bg-[#0f291e] text-white navidad-organic">
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
                 <div class="lg:w-3/5">
-                    <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full">Método de Biología Aplicada</span>
-                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">Recupera la Sabiduría que tu Cuerpo <span class="text-emerald-400 italic">Nunca Olvidó.</span></h1>
-                    <p class="text-xl text-emerald-100/80 mb-10 leading-relaxed max-w-2xl">Entiende los mensajes de tu organismo y reactiva tu energía vital con hábitos ancestrales. <strong>Incluye Test de Autodiagnóstico Inmediato.</strong></p>
+                    <span class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full italic">🌲 Especial de Navidad: 22 de Diciembre</span>
+                    <h1 class="text-4xl lg:text-7xl font-extrabold leading-tight mb-6 text-white">Regálate la Salud que tu Cuerpo <span class="text-emerald-400 italic underline decoration-red-600">Nunca Olvidó.</span></h1>
+                    <p class="text-xl text-emerald-100/80 mb-10 leading-relaxed max-w-2xl">Esta Navidad, decodifica los mensajes de tu organismo. No esperes a enero para renacer. <strong>Incluye Test de Autodiagnóstico Inmediato.</strong></p>
                     
                     <div class="flex flex-col lg:flex-row items-center gap-8">
-                        <a href="#comprar" class="btn-shine px-8 py-5 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-extrabold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_20px_rgba(0,0,0,0.4)] border-2 border-[#d97706] text-center uppercase tracking-widest inline-block">
-                            DESCARGAR EL PROTOCOLO + BONOS
+                        <a href="#comprar" class="btn-shine btn-viral px-8 py-6 bg-emerald-500 hover:bg-emerald-400 text-[#0f291e] font-black rounded-2xl transition-all transform hover:scale-105 shadow-[0_15px_30px_rgba(0,0,0,0.4)] border-2 border-yellow-500 text-center uppercase tracking-tighter inline-block text-xl">
+                            DESCARGAR EL PROTOCOLO + BONOS 🚀
                         </a>
                         <div class="nota-papel text-xl lg:text-2xl text-left">
-                            "todo esto lo consigues en el patio, o en la cocina, donde la vecina o en la galería"
+                            "Mij@, todo esto lo consigues en el patio o en la cocina, es medicina real."
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-2/5 flex justify-center mt-12 lg:mt-0">
+                <div class="lg:w-2/5 flex justify-center mt-12 lg:mt-0 relative">
                     <div class="relative group">
-                        <img src="portada.png" alt="Portada" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 cursor-pointer">
-                        <div class="absolute -bottom-6 -left-6 bg-yellow-500 text-[#0f291e] p-4 rounded-full font-bold shadow-lg animate-bounce text-sm text-center">Sello de <br>Calidad</div>
+                        <img src="portada.webp" alt="Portada Protocolo Ancestral" width="400" height="550" class="w-72 lg:w-96 rounded-r-lg book-shadow transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 cursor-pointer" decoding="async">
+                        <div class="absolute -bottom-10 -left-10 bg-red-600 text-white p-5 rounded-full font-bold shadow-2xl animate-bounce text-sm text-center border-4 border-white">
+                            <span class="text-3xl">🎅</span><br>¡TU REGALO <br>AQUÍ!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,77 +121,59 @@ src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"
 
     <section class="py-16 bg-[#0f291e] text-white text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl lg:text-5xl font-bold mb-16 leading-tight">¿Sientes que tu bienestar es un rompecabezas al que le faltan piezas?</h2>
+            <h2 class="text-3xl lg:text-5xl font-bold mb-16 leading-tight">¿Llegas al final del año sin energía?</h2>
             <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
                 <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
-                    <div class="text-yellow-400 text-3xl mb-4 font-bold">1</div>
-                    <h3 class="text-xl font-bold mb-3">Fatiga Inexplicable</h3>
-                    <p class="text-emerald-100/60 leading-relaxed text-sm">Duermes, pero no sientes descanso real. Tu batería biológica parece agotarse constantemente.</p>
+                    <div class="text-red-500 text-3xl mb-4 font-bold">●</div>
+                    <h3 class="text-xl font-bold mb-3">Fatiga Navideña</h3>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">El ritmo de diciembre te agotó. Duermes, pero tu cuerpo sigue pidiendo auxilio.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
-                    <div class="text-yellow-400 text-3xl mb-4 font-bold">2</div>
+                    <div class="text-red-500 text-3xl mb-4 font-bold">●</div>
                     <h3 class="text-xl font-bold mb-3">Neblina Mental</h3>
-                    <p class="text-emerald-100/60 leading-relaxed text-sm">Falta de enfoque y claridad. Sientes que el ritmo moderno te ha desconectado de tu equilibrio natural.</p>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Falta de enfoque para cerrar tus proyectos. Estás desconectado de tu equilibrio natural.</p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#0a1b14] border border-emerald-900/30 shadow-sm text-left">
-                    <div class="text-yellow-400 text-3xl mb-4 font-bold">3</div>
-                    <h3 class="text-xl font-bold mb-3">Soluciones Temporales</h3>
-                    <p class="text-emerald-100/60 leading-relaxed text-sm">Cansado de opciones que solo cubren el aviso del cuerpo sin atender la necesidad real.</p>
+                    <div class="text-red-500 text-3xl mb-4 font-bold">●</div>
+                    <h3 class="text-xl font-bold mb-3">Excesos del 2025</h3>
+                    <p class="text-emerald-100/60 leading-relaxed text-sm">Tu organismo pide a gritos una limpieza profunda con sabiduría ancestral.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16 text-gray-900 italic">Historias de transformación real:</h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
-                <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4 text-sm">"El <strong>Elixir de Azafrán</strong> de la Fase 2 apoyó mi descanso profundo. ¡Por fin duermo bien!"</p>
-                    <p class="font-bold text-emerald-800 text-xs">- María Paula R., Cali.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4 text-sm">"La neblina mental se despejó con el <strong>Té de Reconexión</strong>. Es un mapa paso a paso muy fácil."</p>
-                    <p class="font-bold text-emerald-800 text-xs">- Carlos H., Bogotá.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4 text-sm">"Desde que uso el <strong>Tónico de Raíces Ancestrales</strong> mi vitalidad es otra. ¡Este protocolo es único!"</p>
-                    <p class="font-bold text-emerald-800 text-xs">- Ximena V., Ecuador.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-[#fdfbf7] border-l-8 border-emerald-600 shadow-sm">
-                    <p class="italic text-gray-700 mb-4 text-sm">"La <strong>Compresa Biológica</strong> fue el alivio que buscaba para mi espalda. Saludos desde Madrid."</p>
-                    <p class="font-bold text-emerald-800 text-xs">- Elena M., España.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-50">
+    <section class="py-24 bg-white relative">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl lg:text-5xl font-bold mb-4">Si actúas hoy, recibes estos regalos <span class="text-emerald-600 underline">GRATIS</span>:</h2>
-            <p class="text-gray-600 mb-16 max-w-2xl mx-auto italic">Complementos diseñados para acelerar tu proceso y asegurar que tu bienestar sea permanente.</p>
+            <p class="text-gray-600 mb-16 max-w-2xl mx-auto italic">Tu kit de rescate biológico para empezar el 2026 renovado.</p>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="bono-card p-6 rounded-3xl bg-white text-left">
-                    <img src="bono1.png" alt="Bono 1" class="w-full h-48 object-cover rounded-2xl mb-6 shadow-sm">
+                    <div class="bono-container-img mb-6">
+                        <img src="bono1.webp" alt="Bono 1" loading="lazy" decoding="async">
+                    </div>
                     <span class="text-emerald-600 font-bold text-sm uppercase tracking-widest">Bono #1</span>
                     <h3 class="text-xl font-bold mt-2 mb-3 text-gray-800">Test del Lenguaje Biológico</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Aprende a identificar qué sistema de tu cuerpo está pidiendo atención y por dónde empezar en solo 5 minutos.</p>
-                    <div class="mt-4 pt-4 border-t border-gray-100 font-bold text-gray-400 line-through">Valor: $27 USD</div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Identifica qué sistema de tu cuerpo está pidiendo atención inmediata en solo 5 minutos.</p>
+                    <div class="pt-4 border-t border-gray-100 font-bold text-gray-400 line-through text-lg">Valor: $5 USD</div>
                 </div>
                 <div class="bono-card p-6 rounded-3xl bg-white text-left">
-                    <img src="bono2.png" alt="Bono 2" class="w-full h-48 object-cover rounded-2xl mb-6 shadow-sm">
+                    <div class="bono-container-img mb-6">
+                        <img src="bono2.webp" alt="Bono 2" loading="lazy" decoding="async">
+                    </div>
                     <span class="text-emerald-600 font-bold text-sm uppercase tracking-widest">Bono #2</span>
                     <h3 class="text-xl font-bold mt-2 mb-3 text-gray-800">Recetario Cocina Medicinal</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">9 platos maestros (desayunos, almuerzos y cenas) con sabor a hogar y alto poder nutricional.</p>
-                    <div class="mt-4 pt-4 border-t border-gray-100 font-bold text-gray-400 line-through">Valor: $37 USD</div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">9 platos maestros con sabor a hogar y alto poder nutricional para estas fechas.</p>
+                    <div class="pt-4 border-t border-gray-100 font-bold text-gray-400 line-through text-lg">Valor: $5 USD</div>
                 </div>
                 <div class="bono-card p-6 rounded-3xl bg-white text-left">
-                    <img src="bono3.png" alt="Bono 3" class="w-full h-48 object-cover rounded-2xl mb-6 shadow-sm">
+                    <div class="bono-container-img mb-6">
+                        <img src="bono3.webp" alt="Bono 3" loading="lazy" decoding="async">
+                    </div>
                     <span class="text-emerald-600 font-bold text-sm uppercase tracking-widest">Bono #3</span>
                     <h3 class="text-xl font-bold mt-2 mb-3 text-gray-800">La Lista Negra</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Identifica a los saboteadores ocultos en tu alacena que detienen tu progreso sin que te des cuenta.</p>
-                    <div class="mt-4 pt-4 border-t border-gray-100 font-bold text-gray-400 line-through">Valor: $17 USD</div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Identifica los saboteadores ocultos en tu alacena que detienen tu energía vital.</p>
+                    <div class="pt-4 border-t border-gray-100 font-bold text-gray-400 line-through text-lg">Valor: $4 USD</div>
                 </div>
             </div>
         </div>
@@ -174,52 +182,52 @@ src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"
     <section class="py-20 bg-[#f4f1ea]">
         <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 text-left">
             <div class="lg:w-1/2">
-                <h2 class="text-4xl font-extrabold mb-8 text-gray-900 leading-tight">Un Sistema Integral, no solo un libro.</h2>
+                <h2 class="text-4xl font-extrabold mb-8 text-gray-900 leading-tight">Un Sistema Integral, no solo un PDF.</h2>
                 <ul class="space-y-6">
-                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Decodificación Biológica</p><p class="text-gray-600 text-sm">Entiende el lenguaje natural de tu cuerpo.</p></div></li>
-                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Protocolo de 4 Fases</p><p class="text-gray-600 text-sm">Un mapa sin errores para restaurar tu vitalidad.</p></div></li>
+                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Decodificación Biológica</p><p class="text-gray-600 text-sm">Entiende el lenguaje natural de tu cuerpo este fin de año.</p></div></li>
+                    <li class="flex items-start">✅ <div class="ml-4"><p class="font-bold text-lg text-gray-800">Protocolo de 4 Fases</p><p class="text-gray-600 text-sm">Un mapa sin errores para restaurar tu vitalidad paso a paso.</p></div></li>
                 </ul>
             </div>
             <div class="lg:w-1/2 flex justify-center">
                 <div class="page-fan">
-                    <img src="pagina4.png" class="p4" style="z-index: 10;"><img src="pagina3.png" class="p3" style="z-index: 9;"><img src="pagina2.png" class="p2" style="z-index: 8;"><img src="pagina1.png" class="p1" style="z-index: 7;">
+                    <img src="pagina4.webp" class="p4" style="z-index: 10;" loading="lazy" decoding="async">
+                    <img src="pagina3.webp" class="p3" style="z-index: 9;" loading="lazy" decoding="async">
+                    <img src="pagina2.webp" class="p2" style="z-index: 8;" loading="lazy" decoding="async">
+                    <img src="pagina1.webp" class="p1" style="z-index: 7;" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="comprar" class="py-20 bg-[#0f291e] text-white">
+    <section id="comprar" class="py-24 bg-[#0f291e] text-white relative">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl lg:text-5xl font-black mb-10 text-yellow-400 animate-jump uppercase leading-none">¡TRANSFORMA TU VIDA HOY MISMO!</h2>
-            <div class="max-w-md mx-auto bg-white rounded-[20px] p-8 text-gray-900 shadow-2xl border-t-8 border-yellow-400">
-                <p class="uppercase font-black tracking-widest text-emerald-700 mb-4 text-xs">RESUMEN DE TU ACCESO:</p>
-                <div class="text-left space-y-2 mb-6 text-sm border-b border-gray-100 pb-4">
-                    <div class="flex justify-between"><span>Protocolo Ancestral</span> <span class="text-gray-400">$50</span></div>
-                    <div class="flex justify-between text-emerald-600 font-bold"><span>Bono 1: Test Lenguaje Biológico</span> <span>GRATIS</span></div>
-                    <div class="flex justify-between text-emerald-600 font-bold"><span>Bono 2: Recetario Medicinal</span> <span>GRATIS</span></div>
+            <h2 class="text-4xl lg:text-6xl font-black mb-10 text-yellow-400 animate-jump uppercase leading-none">¡TRANSFORMA TU VIDA ESTA NAVIDAD!</h2>
+            <div class="max-w-md mx-auto bg-white rounded-[40px] p-10 text-gray-900 shadow-2xl border-t-8 border-red-600">
+                <p class="uppercase font-black tracking-widest text-emerald-700 mb-6 text-xs italic">OFERTA VÁLIDA HASTA EL 31 DE DICIEMBRE</p>
+                <div class="text-left space-y-3 mb-8 text-sm border-b border-gray-100 pb-6">
+                    <div class="flex justify-between"><span>Protocolo Ancestral</span> <span class="text-gray-400 line-through">$50</span></div>
+                    <div class="flex justify-between text-emerald-600 font-bold"><span>Bono 1: Test Biológico</span> <span>GRATIS</span></div>
+                    <div class="flex justify-between text-emerald-600 font-bold"><span>Bono 2: Recetario Navidad</span> <span>GRATIS</span></div>
                     <div class="flex justify-between text-emerald-600 font-bold"><span>Bono 3: La Lista Negra</span> <span>GRATIS</span></div>
                 </div>
-                <div class="flex justify-center items-center gap-3 mb-8">
-                    <span class="text-gray-400 line-through text-2xl font-bold">$36</span>
-                    <span class="text-7xl font-black text-red-600 leading-none">$12</span>
-                    <span class="font-black text-xl text-red-600">USD</span>
+                <div class="flex justify-center items-center gap-3 mb-10">
+                    <span class="text-gray-300 line-through text-3xl font-bold">$36</span>
+                    <span class="text-8xl font-black text-red-600 leading-none tracking-tighter">$12</span>
+                    <span class="font-black text-xl text-red-600 self-end">USD</span>
                 </div>
-                <a href="https://pay.hotmart.com/G103472636G" class="btn-shine block w-full py-5 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-xl rounded-2xl shadow-xl animate-jump text-center uppercase tracking-tighter">¡SÍ, LO QUIERO AHORA!</a>
-                <p class="mt-6 text-[10px] text-gray-400 font-bold uppercase tracking-widest text-center italic">Acceso Digital Inmediato • Pago 100% Seguro</p>
+                <a href="https://pay.hotmart.com/G103472636G" class="btn-shine block w-full py-6 bg-yellow-400 hover:bg-yellow-300 text-[#0f291e] font-black text-2xl rounded-2xl shadow-xl animate-jump text-center uppercase border-b-4 border-yellow-600">¡SÍ, LO QUIERO AHORA!</a>
+                <p class="mt-8 text-[11px] text-gray-400 font-bold uppercase tracking-widest text-center italic">🎁 Acceso Digital Inmediato • Pago Seguro</p>
             </div>
             
-            <p class="mt-12 text-[10px] text-emerald-100/30 max-w-2xl mx-auto leading-relaxed uppercase">
-                Este producto no sustituye el asesoramiento profesional. Consulte a su médico antes de realizar cambios en su dieta o estilo de vida. Los resultados pueden variar según el organismo. Esta página no es parte de Meta o Facebook Inc.
+            <p class="mt-16 text-[10px] text-emerald-100/30 max-w-2xl mx-auto leading-relaxed uppercase">
+                Este producto no sustituye el asesoramiento profesional. Consulte a su médico antes de realizar cambios en su dieta. Los resultados pueden variar. Esta página no es parte de Meta o Facebook Inc.
             </p>
         </div>
     </section>
 
-    <footer class="py-10 text-center bg-[#0a1b14] text-emerald-100/30 text-[10px] font-bold uppercase tracking-widest">
-        <p>© 2025 Club de Sanación Natural. Todos los derechos reservados.</p>
+    <footer class="py-12 text-center bg-[#0a1b14] text-emerald-100/40 text-[11px] font-bold uppercase tracking-[0.3em] navidad-organic">
+        <p>© 2025 Club de Sanación Natural • Cali, Colombia. <br> Todos los derechos reservados.</p>
     </footer>
 
 </body>
 </html>
-
-
-
