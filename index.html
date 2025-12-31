@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tratado Maestro: Alquimia de Sanación Natural</title>
+    <title>Protocolo 2026: El Tratado de Sanación Maestro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
     
     <script>
-        // Generador de ID Único para Deduplicación (event_id)
-        var uniqueEventID = 'IA-' + Date.now() + '-' + Math.floor(Math.random() * 1000000);
+        // Generador de ID Único para sincronización de API (CAPI) y Navegador
+        var uniqueEventID = 'AN-' + Date.now() + '-' + Math.floor(Math.random() * 1000000);
 
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -21,27 +21,31 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         
         fbq('init', '1376300013935976');
-        // Enviando PageView con eventID para deduplicación con CAPI
+        // Deduplicación activa en PageView y ProductPage
         fbq('track', 'PageView', {}, {eventID: uniqueEventID});
-        // Enviando ProductPage (evento del error) con el mismo eventID
-        fbq('track', 'ProductPage', {}, {eventID: uniqueEventID});
+        fbq('track', 'ProductPage', { content_name: 'Tratado Maestro 2026' }, {eventID: uniqueEventID});
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"/></noscript>
 
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Merriweather', serif; }
-        .book-shadow { filter: drop-shadow(15px 20px 30px rgba(0,0,0,0.6)); }
+        .book-shadow { filter: drop-shadow(15px 25px 35px rgba(0,0,0,0.6)); }
 
-        .guirnalda-top {
-            width: 100%; height: 32px; background: #064e3b;
+        .guirnalda-urgencia {
+            width: 100%; height: 35px; background: #b91c1c;
             display: flex; justify-content: center; align-items: center;
-            border-bottom: 3px solid #d97706; position: relative; z-index: 100;
+            border-bottom: 3px solid #fbbf24; position: relative; z-index: 100;
         }
-        .guirnalda-top::after { content: '🌿 ✨ 🍯 ✨ 🍃 ✨ 🏺 ✨ 🌿 ✨ 🍯'; font-size: 0.9rem; letter-spacing: 12px; }
+        .guirnalda-urgencia::after {
+            content: '⚠️ ÚLTIMAS HORAS: EL PRECIO DE $12 EXPIRA ESTA MEDIANOCHE ⚠️';
+            color: white; font-weight: 900; font-size: 0.7rem; letter-spacing: 1px;
+            animation: flash 1s infinite;
+        }
 
+        @keyframes flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
         @keyframes jump { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        .animate-jump { animation: jump 1.8s infinite ease-in-out; }
+        .animate-jump { animation: jump 1.5s infinite ease-in-out; }
 
         .btn-shine { position: relative; overflow: hidden; }
         .btn-shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent); transform: skewX(-25deg); animation: shine 3s infinite; }
@@ -50,13 +54,13 @@
         .nota-manuscrita {
             font-family: 'Caveat', cursive; background: #fffef2; border-left: 5px solid #064e3b;
             box-shadow: 5px 5px 15px rgba(0,0,0,0.1); transform: rotate(-1deg);
-            padding: 0.8rem; color: #166534; max-width: 220px; line-height: 1.2rem;
+            padding: 0.8rem; color: #166534; max-width: 200px; line-height: 1.1rem;
         }
 
-        .img-container-bono { height: 160px; display: flex; align-items: center; justify-content: center; background: #fdfbf7; border-radius: 1rem; overflow: hidden; border: 1px solid #e2e8f0; }
+        .img-container-bono { height: 160px; display: flex; align-items: center; justify-content: center; background: #fdfbf7; border-radius: 1.5rem; overflow: hidden; border: 1px solid #e2e8f0; }
         .img-container-bono img { height: 85%; width: auto; object-fit: contain; }
 
-        .page-fan { position: relative; height: 220px; width: 170px; margin: 0 auto; }
+        .page-fan { position: relative; height: 220px; width: 180px; margin: 0 auto; }
         .page-fan img { position: absolute; transition: all 0.5s ease; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); width: 100%; height: 100%; object-fit: cover; }
         .page-fan:hover .p1 { transform: rotate(-15deg) translateX(-40px); }
         .page-fan:hover .p2 { transform: rotate(-5deg) translateX(-10px); }
@@ -66,27 +70,28 @@
 </head>
 <body class="bg-[#fcfaf2] text-slate-900 overflow-x-hidden">
 
-    <div class="guirnalda-top"></div>
+    <div class="guirnalda-urgencia"></div>
 
-    <header class="relative overflow-hidden pt-6 pb-10 bg-gradient-to-b from-[#0f291e] to-[#064e3b] text-white">
+    <header class="relative overflow-hidden pt-6 pb-12 bg-gradient-to-b from-[#0f291e] to-[#064e3b] text-white">
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col-reverse lg:flex-row items-center gap-6 text-center lg:text-left">
                 <div class="lg:w-3/5">
-                    <span class="inline-block px-3 py-1 mb-3 text-[10px] font-bold tracking-widest text-emerald-400 uppercase border border-emerald-400 rounded-full">Protocolo de Biología Ancestral</span>
-                    <h1 class="text-3xl lg:text-5xl font-black leading-tight mb-4 tracking-tighter">
-                        Sanación Real: Despierta el Poder que tu Cuerpo <span class="text-yellow-500 italic">Nunca Olvidó.</span>
+                    <span class="inline-block px-3 py-1 mb-4 text-[10px] font-black tracking-widest text-emerald-400 uppercase border-2 border-emerald-400 rounded-full bg-emerald-400/10">31 DE DICIEMBRE: TU ÚLTIMA OPORTUNIDAD</span>
+                    <h1 class="text-3xl lg:text-6xl font-black leading-tight mb-4 tracking-tighter">
+                        No Entres al 2026 con un Cuerpo <span class="text-yellow-500 italic">Cansado y Tóxico.</span>
                     </h1>
-                    <p class="text-base text-emerald-100/80 mb-6 max-w-xl mx-auto lg:mx-0">El **Tratado Maestro** para reprogramar tu bienestar celular. Sabiduría densa y práctica. Descarga instantánea con tus bonos exclusivos.</p>
+                    <p class="text-base text-emerald-100/80 mb-6 max-w-xl mx-auto lg:mx-0">El **Tratado Maestro** es tu pasaporte biológico para resetear tu salud esta misma noche. Sin químicos, solo pura alquimia ancestral.</p>
                     <div class="flex flex-col md:flex-row items-center gap-6 justify-center lg:justify-start">
-                        <a href="#comprar" class="btn-shine px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-[#0f291e] font-black rounded-xl transition-all shadow-xl border-b-4 border-yellow-700 uppercase tracking-widest animate-jump text-sm">
-                            ¡SÍ! TRATADO + 3 BONOS GRATIS AHORA
+                        <a href="#comprar" class="btn-shine px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-[#0f291e] font-black rounded-xl transition-all shadow-[0_0_40px_rgba(217,119,6,0.4)] border-b-4 border-yellow-700 uppercase tracking-widest animate-jump text-sm">
+                            SÍ, QUIERO EL TRATADO + 3 BONOS GRATIS
                         </a>
+                        <div class="nota-manuscrita text-lg leading-none">"Mijo, empiece el año limpio, que el cuerpo se lo agradecerá."</div>
                     </div>
                 </div>
                 <div class="lg:w-2/5 flex justify-center relative">
-                    <img src="portada.webp" alt="Tratado Maestro" width="280" class="w-52 lg:w-64 rounded-r-xl book-shadow transform -rotate-2">
-                    <div class="absolute -bottom-4 -right-4 bg-red-600 text-white p-2 rounded-full font-black shadow-2xl animate-bounce text-[9px] text-center border-2 border-white z-30">
-                        🎁 PACK<br>MAESTRO<br>INSTANTÁNEO
+                    <img src="portada.webp" alt="Tratado" width="260" class="w-56 lg:w-64 rounded-r-xl book-shadow transform -rotate-2">
+                    <div class="absolute -bottom-4 -right-4 bg-red-600 text-white p-3 rounded-full font-black shadow-2xl animate-bounce text-[9px] text-center border-2 border-white z-30">
+                        🔥 HOY<br>ÚLTIMA<br>OFERTA
                     </div>
                 </div>
             </div>
@@ -95,21 +100,21 @@
 
     <section class="py-8 bg-white border-b border-gray-100">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl lg:text-3xl font-black mb-6 text-emerald-900 uppercase tracking-tighter italic">Poción de <span class="text-red-600">Rescate Bio-Activa</span></h2>
-            <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#0f291e] to-[#064e3b] text-white p-6 rounded-[35px] border-4 border-emerald-400 shadow-xl relative overflow-hidden">
-                <div class="grid md:grid-cols-2 gap-6 text-left items-center relative z-10">
+            <h2 class="text-2xl lg:text-3xl font-black mb-8 text-[#0f291e] uppercase tracking-tighter italic">Poción de <span class="text-red-600 underline">Rescate Bio-Activa</span></h2>
+            <div class="max-w-4xl mx-auto bg-[#0f291e] text-white p-6 rounded-[40px] border-4 border-emerald-400 shadow-2xl relative overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-6 text-left items-center">
                     <div>
-                        <h3 class="text-lg font-black text-yellow-400 mb-3 uppercase tracking-widest tracking-tighter">Fórmula Base del Tratado:</h3>
-                        <ul class="text-xs space-y-2 font-semibold text-emerald-50">
-                            <li>🌿 1 Vaso de Agua de Coco (Electrolitos)</li>
-                            <li>🍋 Jugo de 1 Limón Mandarino (Vitamina C)</li>
-                            <li>🔥 1cm de Jengibre (Activador Metabólico)</li>
-                            <li>🧂 Pizca de Sal Marina (Balance Iónico)</li>
+                        <h4 class="text-xl font-black text-yellow-400 mb-4 uppercase tracking-widest">Fórmula de Reseteo Inmediato:</h4>
+                        <ul class="text-xs space-y-3 font-semibold text-emerald-50">
+                            <li class="flex items-center gap-2">🌿 Agua de Coco (Electrolitos de Alta Biodisponibilidad)</li>
+                            <li class="flex items-center gap-2">🍋 Jugo de Limón Mandarino (Shock de Vitamina C)</li>
+                            <li class="flex items-center gap-2">🔥 Jengibre Rallado (Activador Metabólico)</li>
+                            <li class="flex items-center gap-2">🧂 Pizca de Sal Marina (Balance Iónico)</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/20">
-                        <p class="text-xs text-emerald-100 leading-relaxed italic">
-                            "Mijo, este elixir limpia tu sangre en minutos. Es solo una de las cientos de herramientas que te entrego para que no dependas de nada más."
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/20">
+                        <p class="text-sm text-emerald-100 leading-relaxed italic">
+                            "Mijo, tómalo esta noche antes de las uvas. Limpia tu hígado y te prepara para el 2026. Es solo un adelanto de lo que el Tratado hará por ti."
                         </p>
                     </div>
                 </div>
@@ -118,94 +123,92 @@
     </section>
 
     <section class="py-10 bg-[#f4f1ea]">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-black mb-8 text-slate-900 uppercase tracking-tighter">Voces de <span class="text-emerald-700 underline">Sanación Real</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"A mis 45 años sentía que la energía se me escapaba. El <strong>Tratado</strong> me devolvió la vida que ni el café lograba."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px]">— Martha R., Medellín.</p>
-                </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"La neblina mental no me dejaba trabajar. Con el <strong>Té de Reconexión</strong>, mi enfoque volvió al instante."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px]">— Jorge V., Ciudad de México.</p>
-                </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"Mi digestión era una guerra constante. Este Tratado fue la paz que mi cuerpo buscaba por años."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px]">— Lucía M., Madrid.</p>
-                </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"Dejé de depender de pastillas para dormir. La <strong>Ley de la Cascada</strong> me enseñó a sanar desde la raíz."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px]">— Andrés K., Buenos Aires.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-10 bg-white text-center border-y border-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-2xl lg:text-4xl font-black mb-8 text-slate-900 uppercase tracking-tighter">
-                Tu Pack de Bienestar <span class="text-red-600 underline">Todo-en-Uno</span>
-            </h2>
-            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
-                <div class="p-4 rounded-[30px] bg-[#f8fafc] border border-emerald-100 shadow-sm relative">
-                    <div class="absolute top-2 right-2 bg-emerald-600 text-white text-[9px] font-black px-2 py-1 rounded-full uppercase">GRATIS</div>
-                    <div class="img-container-bono mb-3"><img src="bono1.webp" alt="Bono 1"></div>
-                    <h3 class="text-sm font-black text-slate-800 uppercase">Bono A: Test Biológico</h3>
-                    <p class="text-[10px] text-slate-500 mt-1">Identifica el origen real de tu fatiga.</p>
+            <h2 class="text-2xl font-black mb-10 text-center uppercase tracking-tighter">Ellos Ya <span class="text-emerald-700 underline">Cambiaron Su Destino</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-600 text-left">
+                    <p class="text-[11px] italic text-slate-600">"Llegaba al 31 de diciembre agotada. El <strong>Tratado</strong> me enseñó que la fatiga no es 'normal'. ¡Hoy tengo la energía de mis 20!"</p>
+                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Martha R., Medellín.</p>
                 </div>
-                <div class="p-4 rounded-[30px] bg-[#f8fafc] border border-emerald-100 shadow-sm relative">
-                    <div class="absolute top-2 right-2 bg-emerald-600 text-white text-[9px] font-black px-2 py-1 rounded-full uppercase">GRATIS</div>
-                    <div class="img-container-bono mb-3"><img src="bono2.webp" alt="Bono 2"></div>
-                    <h3 class="text-sm font-black text-slate-800 uppercase">Bono B: Cocina Medicinal</h3>
-                    <p class="text-[10px] text-slate-500 mt-1">Cenas diarias que regeneran tu cuerpo.</p>
+                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-600 text-left">
+                    <p class="text-[11px] italic text-slate-600">"Mi neblina mental era insoportable. Con el <strong>Té de Reconexión</strong>, mi cerebro se encendió de nuevo. Es milagroso."</p>
+                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Jorge V., CDMX.</p>
                 </div>
-                <div class="p-4 rounded-[30px] bg-[#f8fafc] border border-emerald-100 shadow-sm relative">
-                    <div class="absolute top-2 right-2 bg-emerald-600 text-white text-[9px] font-black px-2 py-1 rounded-full uppercase">GRATIS</div>
-                    <div class="img-container-bono mb-3"><img src="bono3.webp" alt="Bono 3"></div>
-                    <h3 class="text-sm font-black text-slate-800 uppercase">Bono C: La Lista Negra</h3>
-                    <p class="text-[10px] text-slate-500 mt-1">Lo que NUNCA debes poner en tu mesa.</p>
+                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-600 text-left">
+                    <p class="text-[11px] italic text-slate-600">"Años sufriendo de inflamación constante. La <strong>Ley de la Cascada</strong> me salvó. Mi mejor compra del 2025."</p>
+                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Lucía M., Madrid.</p>
+                </div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-600 text-left">
+                    <p class="text-[11px] italic text-slate-600">"Dormir por fin es descansar. El Tratado es la paz que mi cuerpo necesitaba. ¡Empezaré el 2026 renovado!"</p>
+                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Andrés K., Buenos Aires.</p>
                 </div>
             </div>
-            <p class="text-xs font-black text-emerald-800 italic bg-emerald-50 px-6 py-3 rounded-full inline-block border-2 border-emerald-200 animate-pulse">
-                🚀 Los 3 Bonos se incluyen GRATIS al descargar tu Tratado Maestro hoy.
-            </p>
         </div>
     </section>
 
-    <section id="comprar" class="py-10 bg-[#0f291e] text-white">
+    <section class="py-12 bg-white text-center border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl lg:text-4xl font-black mb-12 text-slate-900 uppercase tracking-tighter">
+                Tu Pack de Rescate <span class="text-red-600">Total</span> 2026
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
+                <div class="p-6 rounded-[35px] bg-[#f8fafc] border border-emerald-100 shadow-xl relative hover:scale-105 transition-transform">
+                    <div class="absolute -top-3 -right-2 bg-emerald-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+                    <div class="img-container-bono mb-4"><img src="bono1.webp" alt="Bono 1"></div>
+                    <h3 class="text-base font-black text-slate-800 uppercase">Test Biológico</h3>
+                    <p class="text-[11px] text-slate-500 mt-2 italic">Descubre qué sistema de tu cuerpo está pidiendo auxilio urgente.</p>
+                </div>
+                <div class="p-6 rounded-[35px] bg-[#f8fafc] border border-emerald-100 shadow-xl relative hover:scale-105 transition-transform">
+                    <div class="absolute -top-3 -right-2 bg-emerald-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+                    <div class="img-container-bono mb-4"><img src="bono2.webp" alt="Bono 2"></div>
+                    <h3 class="text-base font-black text-slate-800 uppercase">Cocina Medicinal</h3>
+                    <p class="text-[11px] text-slate-500 mt-2 italic">Cómo transformar tus cenas diarias en medicina biológica real.</p>
+                </div>
+                <div class="p-6 rounded-[35px] bg-[#f8fafc] border border-emerald-100 shadow-xl relative hover:scale-105 transition-transform">
+                    <div class="absolute -top-3 -right-2 bg-emerald-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">GRATIS HOY</div>
+                    <div class="img-container-bono mb-4"><img src="bono3.webp" alt="Bono 3"></div>
+                    <h3 class="text-base font-black text-slate-800 uppercase">La Lista Negra</h3>
+                    <p class="text-[11px] text-slate-500 mt-2 italic">Los 12 ingredientes que te están robando la vida sin que lo sepas.</p>
+                </div>
+            </div>
+            <div class="bg-red-600 text-white px-8 py-3 rounded-full inline-block shadow-2xl animate-pulse">
+                <p class="text-xs font-black uppercase tracking-widest italic">🚀 Todo Incluido GRATIS al descargar tu Tratado Principal hoy</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="comprar" class="py-12 bg-[#0f291e] text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black mb-8 text-yellow-500 italic uppercase tracking-tighter">¡EL MOMENTO ES HOY!</h2>
+            <h2 class="text-3xl lg:text-5xl font-black mb-10 text-yellow-500 italic uppercase tracking-tighter">¡EL MOMENTO ES AHORA O NUNCA!</h2>
             
-            <div class="max-w-xs mx-auto bg-white rounded-[35px] p-6 text-slate-900 shadow-[0_30px_70px_rgba(0,0,0,0.6)] border-t-[10px] border-emerald-500">
-                <p class="uppercase font-black tracking-widest text-emerald-700 mb-4 text-[10px] italic">RECUERDA LO QUE RECIBES:</p>
+            <div class="max-w-xs mx-auto bg-white rounded-[40px] p-8 text-slate-900 shadow-[0_40px_80px_rgba(0,0,0,0.6)] border-t-[10px] border-emerald-500">
+                <p class="uppercase font-black tracking-widest text-emerald-700 mb-6 text-[10px] italic">RECAPITULACIÓN DE TU VALOR:</p>
                 
-                <div class="text-left space-y-1 mb-4 text-[10px] border-b border-gray-100 pb-3 font-semibold">
+                <div class="text-left space-y-2 mb-8 text-[11px] border-b border-gray-100 pb-6 font-bold">
                     <div class="flex justify-between"><span>📖 Tratado Maestro</span> <span class="text-gray-300 line-through">$50</span></div>
-                    <div class="flex justify-between text-emerald-600"><span>🎁 Bono A: Test Biológico</span> <span>GRATIS</span></div>
-                    <div class="flex justify-between text-emerald-600"><span>🎁 Bono B: Cocina Medicinal</span> <span>GRATIS</span></div>
-                    <div class="flex justify-between text-emerald-600"><span>🎁 Bono C: La Lista Negra</span> <span>GRATIS</span></div>
+                    <div class="flex justify-between text-emerald-600 italic"><span>🎁 Bono A: Test Biológico</span> <span>GRATIS</span></div>
+                    <div class="flex justify-between text-emerald-600 italic"><span>🎁 Bono B: Cocina Medicinal</span> <span>GRATIS</span></div>
+                    <div class="flex justify-between text-emerald-600 italic"><span>🎁 Bono C: La Lista Negra</span> <span>GRATIS</span></div>
                 </div>
 
-                <div class="flex justify-center items-center gap-3 mb-6">
-                    <span class="text-gray-300 line-through text-2xl font-bold">$97</span>
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <span class="text-gray-300 line-through text-3xl font-bold">$97</span>
                     <div class="relative">
-                        <span class="text-6xl font-black text-emerald-700 leading-none">$12</span>
-                        <span class="font-black text-sm text-emerald-700 ml-1">USD</span>
+                        <span class="text-7xl font-black text-emerald-700 leading-none">$12</span>
+                        <span class="absolute -top-1 -right-8 font-black text-lg text-emerald-700 uppercase">USD</span>
                     </div>
                 </div>
 
-                <a href="https://pay.hotmart.com/G103472636G?checkoutMode=10" class="btn-shine block w-full py-4 bg-yellow-500 hover:bg-yellow-400 text-[#0f291e] font-black text-xl rounded-2xl shadow-xl animate-jump text-center uppercase tracking-tighter">
-                    ¡DESCARGAR TODO AHORA!
+                <a href="https://pay.hotmart.com/G103472636G?checkoutMode=10" class="btn-shine block w-full py-5 bg-yellow-500 hover:bg-yellow-400 text-[#0f291e] font-black text-2xl rounded-2xl shadow-xl animate-jump text-center uppercase tracking-tighter">
+                    ¡ACCESO TOTAL YA!
                 </a>
                 
-                <p class="mt-4 text-[9px] text-gray-400 font-bold uppercase tracking-widest italic">Acceso inmediato en tu e-mail</p>
+                <p class="mt-6 text-[9px] text-gray-400 font-bold uppercase tracking-widest italic">Recibe tus archivos en tu e-mail al instante</p>
             </div>
+            
+            <p class="mt-12 text-emerald-100/40 text-[9px] uppercase tracking-[0.3em] font-black">© 2025 CLUB DE SANACIÓN NATURAL • CALI, COLOMBIA</p>
         </div>
     </section>
-
-    <footer class="py-6 text-center bg-[#0a1b14] text-emerald-100/30 text-[9px] font-bold uppercase tracking-[0.3em]">
-        <p>© 2025 Club de Sanación Natural • Cali, Colombia</p>
-    </footer>
 
 </body>
 </html>
