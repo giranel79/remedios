@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="facebook-domain-verification" content="28rc6vugsl3kyxsa660e0drrkwev75" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -26,7 +28,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const userEmail = urlParams.get('em') || ''; 
         const userPhone = urlParams.get('ph') || '';
-        var uniqueEventID = 'RS-PRO-2026-' + Date.now();
+        var uniqueEventID = 'RS-FULL-2026-' + Date.now();
 
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -37,18 +39,9 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
 
-        // Inicialización con Parámetros de Coincidencia Manual según instructivo de Meta
-        fbq('init', '1376300013935976', { 
-            em: userEmail, 
-            ph: userPhone 
-        });
-        
+        fbq('init', '1376300013935976', { em: userEmail, ph: userPhone });
         fbq('track', 'PageView', {}, {eventID: uniqueEventID});
-        fbq('track', 'ProductPage', { 
-            content_name: 'Remedios Secretos Personalizado', 
-            value: 12.00, 
-            currency: 'USD' 
-        }, {eventID: uniqueEventID});
+        fbq('track', 'ProductPage', { content_name: 'Remedios Secretos Full', value: 12.00, currency: 'USD' }, {eventID: uniqueEventID});
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1376300013935976&ev=PageView&noscript=1"/></noscript>
 
@@ -84,15 +77,15 @@
 
     <div class="guirnalda-2026"></div>
 
-    <header class="relative pt-6 pb-12 bg-gradient-to-b from-[#0f291e] to-[#064e3b] text-white">
-        <div class="container mx-auto px-6 text-center lg:text-left text-center lg:text-left">
+    <header class="relative pt-6 pb-12 bg-gradient-to-b from-[#0f291e] to-[#064e3b] text-white text-center lg:text-left">
+        <div class="container mx-auto px-6">
             <div class="flex flex-col-reverse lg:flex-row items-center gap-8">
                 <div class="lg:w-3/5">
                     <span class="inline-block px-3 py-1 mb-4 text-[10px] font-black tracking-widest text-emerald-400 uppercase border-2 border-emerald-400 rounded-full bg-emerald-400/10">Sistema de Sanación 2026: Tu Bienestar es Personal</span>
                     <h1 class="text-3xl lg:text-6xl font-black leading-tight mb-4 tracking-tighter">
                         Sanar es un acto de amor. <span class="text-yellow-500 italic">Déjame cuidarte.</span>
                     </h1>
-                    <p class="text-base text-emerald-100/80 mb-6 max-w-xl mx-auto lg:mx-0">Descarga los **Remedios Secretos de Sanación Natural** hoy y recibe de mi parte un manual personalizado para el malestar que hoy te quite el sueño.</p>
+                    <p class="text-base text-emerald-100/80 mb-6 max-w-xl mx-auto lg:mx-0 font-light">Descarga los **Remedios Secretos de Sanación Natural** hoy y recibe de mi parte un manual personalizado para el malestar que hoy te quite el sueño.</p>
                     <a href="#comprar" class="btn-shine px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-[#0f291e] font-black rounded-xl shadow-xl border-b-4 border-yellow-700 uppercase tracking-widest animate-jump inline-block text-sm">
                         QUIERO MI EBOOK + MANUAL PERSONALIZADO
                     </a>
@@ -112,11 +105,11 @@
                     <h2 class="text-2xl md:text-3xl font-black text-[#166534] mt-2 italic">Un Regalo de mi Corazón para ti</h2>
                 </div>
                 <div class="space-y-4 text-slate-800 leading-relaxed font-medium">
-                    <p class="font-bold text-lg">"Mijito, quiero darte algo que el dinero no puede comprar: mi atención."</p>
+                    <p class="font-bold text-lg text-center lg:text-left">"Mijito, quiero darte algo que el dinero no puede comprar: mi atención."</p>
                     <p>Si adquieres mis recetas hoy, me sentaré personalmente a prepararte un **Manual de Bolsillo Personalizado** enfocado únicamente en ese tema de salud que hoy más te preocupa.</p>
                     
                     <div class="bg-white/50 p-6 rounded-lg border-l-4 border-[#166534] my-6">
-                        <h4 class="font-black text-sm uppercase mb-3">¿Cómo recibir mi manual de regalo?</h4>
+                        <h4 class="font-black text-sm uppercase mb-3 text-[#166534]">¿Cómo recibir mi manual de regalo?</h4>
                         <ol class="list-decimal list-inside text-sm space-y-3">
                             <li>Completa tu pedido de los <strong>Remedios Secretos</strong>.</li>
                             <li>Busca el email de Hotmart (Asunto: <i>¡Compra aprobada!</i>) y ve al final donde dice <strong>"Email del Productor"</strong>.</li>
@@ -125,7 +118,7 @@
                         </ol>
                     </div>
 
-                    <p class="text-sm italic">"Te enviaré tus secretos personalizados en 24 a 48 horas. Mis manos son lentas, pero mi amor por tu sanación es infinito."</p>
+                    <p class="text-sm italic text-center lg:text-left">"Te enviaré tus secretos personalizados en 24 a 48 horas. Mis manos son lentas, pero mi amor por tu sanación es infinito."</p>
                 </div>
                 <div class="absolute -bottom-4 -right-4 font-['Caveat'] text-3xl text-[#166534] font-bold">
                     - Tu Abuela.
@@ -135,19 +128,19 @@
     </section>
 
     <section class="py-10 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl lg:text-3xl font-black mb-8 text-emerald-900 uppercase italic">Poción de <span class="text-red-600 underline">Rescate Inmediato</span></h2>
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl lg:text-3xl font-black mb-8 text-emerald-900 uppercase italic text-center">Poción de <span class="text-red-600 underline">Rescate Bio-Activo</span></h2>
             <div class="max-w-4xl mx-auto bg-[#0f291e] text-white p-6 rounded-[40px] border-4 border-emerald-400 shadow-xl text-left flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/2">
                     <h4 class="text-xl font-black text-yellow-400 mb-4 uppercase">Alquimia de Recuperación:</h4>
-                    <ul class="text-xs space-y-3 font-semibold">
+                    <ul class="text-xs space-y-3 font-semibold text-emerald-50">
                         <li>🌿 Agua de Coco (Electrolitos Reales)</li>
                         <li>🍋 Limón Mandarino (Shock Bio-C)</li>
-                        <li>🔥 Jengibre (Activador Metabólico)</li>
+                        <li>🔥 1cm de Jengibre (Activador Metabólico)</li>
                         <li>🧂 Pizca de Sal Marina (Balance Iónico)</li>
                     </ul>
                 </div>
-                <div class="md:w-1/2 bg-white/10 p-6 rounded-3xl border border-white/20 italic text-sm text-emerald-100">
+                <div class="md:w-1/2 italic text-sm text-emerald-100 leading-relaxed font-light">
                     "Tómalo ahora. Es el primer secreto que te entrego para que sientas cómo la vida vuelve a tus venas. Lo que hay en el eBook es mil veces más potente."
                 </div>
             </div>
@@ -158,21 +151,21 @@
         <div class="container mx-auto px-6">
             <h2 class="text-2xl font-black mb-10 text-center uppercase tracking-tighter">Ellos Ya <span class="text-emerald-700 underline">Están Sanando</span></h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"El 1 de enero empecé. Hoy mi energía es otra. ¡Es real!"</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase">— Martha R., Medellín.</p>
+                <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
+                    <p class="text-[12px] italic text-slate-600">"El 1 de enero empecé. Hoy mi energía es otra. ¡Es real!"</p>
+                    <p class="mt-3 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Martha R., Medellín.</p>
                 </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"La neblina mental desapareció. Mi cerebro despertó por fin."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase">— Jorge V., CDMX.</p>
+                <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
+                    <p class="text-[12px] italic text-slate-600">"La neblina mental desapareció. Mi cerebro despertó por fin."</p>
+                    <p class="mt-3 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Jorge V., CDMX.</p>
                 </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"Mi digestión por fin tiene paz. La mejor inversión de mi año."</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase">— Lucía M., Madrid.</p>
+                <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
+                    <p class="text-[12px] italic text-slate-600">"Mi digestión por fin tiene paz. La mejor inversión de mi año."</p>
+                    <p class="mt-3 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Lucía M., Madrid.</p>
                 </div>
-                <div class="bg-white p-4 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
-                    <p class="text-[11px] italic text-slate-600">"Empiezo el año renovado. ¡Adiós a las pastillas para dormir!"</p>
-                    <p class="mt-2 font-black text-emerald-800 text-[10px] uppercase">— Andrés K., Buenos Aires.</p>
+                <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-emerald-500 text-left">
+                    <p class="text-[12px] italic text-slate-600">"Empiezo el año renovado. ¡Adiós a las pastillas para dormir!"</p>
+                    <p class="mt-3 font-black text-emerald-800 text-[10px] uppercase tracking-widest">— Andrés K., Buenos Aires.</p>
                 </div>
             </div>
         </div>
@@ -181,7 +174,7 @@
     <section class="py-12 bg-white text-center border-y border-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-2xl lg:text-4xl font-black mb-12 text-slate-900 uppercase tracking-tighter">
-                Tu Pack de Rescate <span class="text-red-600">Total</span> 2026
+                Tu Pack de Rescate <span class="text-red-600 underline">Total</span> 2026
             </h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10">
                 <div class="p-6 rounded-[35px] bg-[#f8fafc] border border-emerald-100 shadow-xl relative">
@@ -209,14 +202,14 @@
             <div class="max-w-xs mx-auto bg-white rounded-[40px] p-8 text-slate-900 shadow-[0_40px_80px_rgba(0,0,0,0.6)] border-t-[10px] border-emerald-500">
                 
                 <div class="mb-6 p-3 bg-yellow-50 rounded-2xl border-2 border-yellow-200">
-                    <p class="text-[10px] font-black text-yellow-800 leading-tight uppercase italic text-yellow-800">
+                    <p class="text-[10px] font-black text-yellow-800 leading-tight uppercase italic">
                         ⚠️ ATENCIÓN: El descuento ya está aplicado. No busques cupones; el sistema ya bloqueó tu precio de $12 automáticamente.
                     </p>
                 </div>
 
                 <div class="text-left space-y-2 mb-8 text-[11px] border-b border-gray-100 pb-6 font-bold">
                     <div class="flex justify-between"><span>📖 Remedios Secretos</span> <span class="text-gray-300 line-through">$50</span></div>
-                    <div class="flex justify-between text-emerald-600 italic"><span>🎁 3 Bonos Incluidos</span> <span class="text-emerald-600">GRATIS</span></div>
+                    <div class="flex justify-between text-emerald-600 italic"><span>🎁 3 Bonos de Regalo</span> <span class="text-emerald-600">GRATIS</span></div>
                     <div class="flex justify-between text-yellow-600 font-black italic"><span>✨ Manual Personalizado</span> <span>BONO HOY</span></div>
                 </div>
 
@@ -240,7 +233,7 @@
             
             <p class="mt-12 text-emerald-100/40 text-[9px] uppercase tracking-[0.4em] font-black italic">© 2026 CLUB DE SANACIÓN NATURAL • CALI, COLOMBIA</p>
         </div>
-    </section>
+    </header>
 
 </body>
 </html>
